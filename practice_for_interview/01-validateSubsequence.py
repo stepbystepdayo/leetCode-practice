@@ -10,20 +10,68 @@ array = [5,1,22,25,6,-1,8,10]
 sequence = [1,6,-1,10]
 
 Sample output: True
+
+
+Kai/sayo notes:
+
+so the array is not empty! good, we dont have to check for this. if we do check, we can just see if len(array) and len(sequence is not == 0)
 '''
 
+# i will make a HELPER function, because IT HELPS ME to CHECK if they arrays are (hontoni) not empty.
+# for refactoring, we should try to use *args and learn how to LOOP OVER args and check each one!!!!
+# def arraysNotEmpty(array1, array2):
+#     # array1.length
+#     if len(array1) == 0 or len(array2) == 0 or isinstance(array1, list) == False or isinstance(array2, list) == False:
+#         return False
+#     else:
+#         return True
+
+# def isValidSubsequenceElite(array,subsequence):
+    # first, CHECK if arrays are actually NOT EMPTY!!!
+
+#     isEmpty = arraysNotEmpty(array, subsequence)
+
+#     if isEmpty == False:
+#         return False, "THE INPUT ARRAYS ARE EMPTY! PLEASE FIX!"
+
+    
 
 
-def isValidSubsequence(array, sequence):
-    hashmap = {}
-    # print(hashmap)
-    # for num in array:
-    #     for seqNum in sequence:
-    #         if seqNum not in hashmap:
-    #             hashmap[seqNum] = 0
-    #         if hashmap[seqNum] == num:
-    #             hashmap[seqNum] += 1
-        
+
+
+
+
+
+
+def isValidSubsequenceElite(array, subsequence):
+    # need to make pointer
+    arrayPointer, subPointer = 0,0
+
+    while arrayPointer < len(array) and subPointer < len(subsequence):
+        if array[arrayPointer] == subsequence[subPointer]:
+            subPointer += 1
+            arrayPointer += 1
+        else:
+            arrayPointer += 1
+    print(arrayPointer,subPointer)
+
+    if subPointer < len(subsequence):
+        return False
+    return True
+
+    # if subPointer >= len(subsequence):
+    #     return True
+    # return False
+
+
+print(isValidSubsequenceElite([1,2,3,4,5,6],[7]))
+
+
+
+
+
+
+
         
 
 
@@ -43,4 +91,8 @@ def isValidSubsequence(array, sequence):
 
 
 
-print(isValidSubsequence([5,1,22,25,6,-1,8,10],[1,6,-1,10]))
+print(isValidSubsequenceElite([5,1,22,25,6,-1,8,10,8, 10],[1,6,-1,10, 10]))
+# print(isValidSubsequenceElite([0], []))
+# print(isValidSubsequenceElite([], [0]))
+# print(isValidSubsequenceElite([],[]))
+# print(isValidSubsequenceElite("hi", "im kai and im handsome"))
