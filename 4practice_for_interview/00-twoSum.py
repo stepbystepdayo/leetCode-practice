@@ -64,22 +64,25 @@ def solution(nums, target):
 # 4. we need to make the valiable adding start and end
 
 
-    sortedNums =sorted(nums)
+    sortedNums = sorted(nums)
     # print(sortedNums)
     start = 0
     end = len(nums) -1
-    # print(start,end)
+    # print(start,end) 
 
 
     while start < end:
         startandEnd = sortedNums[start] + sortedNums[end]
         # print(startandEnd)
+        #if target is less than startandEnd, end will move to left.
         if startandEnd > target:
             end -= 1
+        # if target is bigger than startandEnd, start will move to right.
         if startandEnd < target:
             start += 1
+        #if target is same number as target, return number of start and end!
         if startandEnd == target:
-            return [start], [end] 
+            return [start,end] 
     return -1
 
 

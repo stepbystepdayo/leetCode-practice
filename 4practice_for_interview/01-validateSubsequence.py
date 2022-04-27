@@ -55,16 +55,12 @@ def isValidSubsequenceElite(array, subsequence):
             arrayPointer += 1
     print(arrayPointer,subPointer)
 
-    if subPointer < len(subsequence):
-        return False
-    return True
-
-    # if subPointer >= len(subsequence):
-    #     return True
-    # return False
+    if subPointer == len(subsequence):
+        return True
+    return False
 
 
-print(isValidSubsequenceElite([1,2,3,4,5,6],[7]))
+print(isValidSubsequenceElite([1,2,3,4,5,6],[2,3,4]))
 
 
 
