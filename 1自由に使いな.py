@@ -42,17 +42,56 @@
 
 # Insertion Sort
 
-def sort_list(unsorted_list):
-    for i, entry in enumerate(unsorted_list):
-        current = i
-        while current > 0 and unsorted_list[current] < unsorted_list[current - 1]:
-            unsorted_list[current], unsorted_list[current -1] = unsorted_list [current -1],unsorted_list[current]
-            current -= 1
-        return unsorted_list
+# def sort_list(unsorted_list):
+#     for i, entry in enumerate(unsorted_list):
+#         current = i
+#         while current > 0 and unsorted_list[current] < unsorted_list[current - 1]:
+#             unsorted_list[current], unsorted_list[current -1] = unsorted_list [current -1],unsorted_list[current]
+#             current -= 1
+#         return unsorted_list
 
-if __name__ == '__main__':
-    unsorted_list = [int(x) for x in input().split()]
-    res = sort_list(unsorted_list)
-    print(' '.join(map(str, res)))
+# if __name__ == '__main__':
+#     unsorted_list = [int(x) for x in input().split()]
+#     res = sort_list(unsorted_list)
+#     print(' '.join(map(str, res)))
+
+# Bubble Sort
+
+
+
+
+
+#lambda Python
+
+# def calc(base, height):
+#     return base * height /2
+
+# print(calc(2,5))
+
+# test = (lambda base, height: base * height/2)(5,10)
+
+# print(f"this is lambda test: {test}")
+
+# change all names to capital
+
+
+
+
+def capital(students):
+    return [student.upper() for student in students]
+
+print(capital(['Mizoguchi','lovingfoss','TaNaKa','kiBa']))
+
+
+# When you use lambda!
+
+def usingLambda(names):
+    return list(map(lambda name:name.upper(),names))
+
+print(usingLambda(['Mizoguchi','lovingfoss','TaNaKa','kiBa']))
+
+
+
+
 
 
