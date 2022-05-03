@@ -34,11 +34,10 @@ def solution(str1, str2):
 
     # for i in range(len(str1)):
         # c1, c2 = str1[i], str2[i]
-    #ether range(len()) and zip() is fine!!!! 
+    # ether range(len()) and zip() is fine!!!! 
     for c1, c2 in zip(str1,str2):
-        # print(c1,c2)
-        if ((c1 in map1 and map1[
-            1] != c2) or (c2 in map2 and map2[c2] != c1)):
+        print(c1,c2)
+        if ((c1 in map1 and map1[c1] != c2) or (c2 in map2 and map2[c2] != c1)):
             return False
 
         map1[c1] = c2
