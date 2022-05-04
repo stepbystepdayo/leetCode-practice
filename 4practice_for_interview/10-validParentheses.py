@@ -25,10 +25,7 @@ Output: false
 '''
 
 def solution(parentheses):
-    # make the stack to store the parentheses 
     stack = []
-    # make the defalut to what kinf of parentathese are there in hashmap the, we can check these.
-    # also, we need to check the close parentathese like these (,{,[. because if we found ),},] first thats mean these can not find (,{,[.
     closeToOpen = {')':'(','}':'{',']':'['}
 
     for pare in parentheses:
@@ -44,7 +41,12 @@ def solution(parentheses):
 
 
 
-
 print(solution('()')) #True
 print(solution('()[]{')) #False
 print(solution('[]'))# True
+
+
+
+# make the stack to store the parentheses 
+# make the defalut to what kinf of parentathese are there in hashmap the, we can check these.
+    # also, we need to check the close parentathese like these (,{,[. because if we found ),},] first thats mean these can not find (,{,[.
