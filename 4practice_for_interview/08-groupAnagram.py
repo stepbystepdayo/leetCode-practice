@@ -12,13 +12,28 @@ Examples
 Example 1:
 Input:
 
-strs = ["eat" ,"tea", "tan", "ate", "nat", "bat"]
+
 Output: [["ate", "eat", "tea"], ["bat"], ["nat", "tan"]]
 '''
 
+import string
+
+
+strs = ["eat" ,"tea", "tan", "ate", "nat", "bat"]
 
 def solution(chars):
     hash = {}
+    for word in chars:
+        d = dict.fromkeys(string.ascii_lowercase, 0)
+        for letter in word:
+            d[letter] += 1
+        frozen = tuple(d.items())
 
-    for char in chars:
-        
+        if frozen not in hash:
+            hash[frozen] = []
+
+        hash[frozen].append(word)
+    return hash.values()
+
+
+print(solution(strs))
