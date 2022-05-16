@@ -8,7 +8,7 @@ def solution(redShirtHeights,blueShirtHeights):
 
     colorFirstRow = 'RED' if redShirtHeights[0] < blueShirtHeights[0] else 'Blue'
 
-    for index in enumerate(redShirtHeights):
+    for index in range(len(redShirtHeights)):
         if colorFirstRow == 'RED':
             if redShirtHeights >= blueShirtHeights:
                 return False
