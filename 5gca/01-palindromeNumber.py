@@ -26,9 +26,21 @@ def solution(numbers):
     # need to check the number is negative or not. if it is negative, return False.
     if numbers is not abs(numbers):
         return False
-    for idx in range(numbers):
-        print(idx)
+    numberString = str(numbers) # O(N)
 
+    start = 0
+    end = len(numberString) -1
+
+    while start < end:
+        if numberString[start] != numberString[end]:
+            # DEFAULT FAIL YOU FAILLLL
+            return False
+        start += 1
+        end -= 1
+    # we passed the jungle, we survived the while. 
+
+    # VICTORY YOU WIN
+    return True
         
     
 
@@ -37,6 +49,7 @@ def solution(numbers):
 
 
 
-# print(solution(numbers = 121))
-# print(solution(numbers = -121))
+print(solution(numbers = 1221))
+print(solution(numbers = 121))
+print(solution(numbers = -121))
 print(solution(numbers = 10))
