@@ -27,10 +27,14 @@ result4 = s % k + 4 - 7 ** (2 / 3)
 # ** is ２乗　i.g: 2 ** 2 = 4 | 2 ** 3 = 8  
 
 # 1. brackets / parathensis
-# 2. exponents
+# 2. exponents **　２乗
 # 3. multiplication and division and mod
 # 4. addtion substraction
 
 # answer = "5" + 6  this is not working ERROR
 # answer = 4.5 / "5"  this is not working ERROR
 # answer = 4.5 / True => 4.5 because True is 1 in python but if 4.5 / False will be ERROR False is 0.
+
+ans = 7 / 1
+
+print(ans)
