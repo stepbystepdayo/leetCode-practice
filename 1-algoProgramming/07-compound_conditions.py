@@ -24,4 +24,12 @@ compound4 = True == (not False) it will run () first
 
 not (x and y) == (not x) or *(not y)
 
+'''
+conditional / comparison operators
+Not
+And 
+Or
+
+'''
+
 
