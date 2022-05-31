@@ -1,5 +1,3 @@
-from tkinter import Y
-
 
 x = [1,2,3,True, 3.4, "Hello"]
 # index: 0,1,2,3,4,5 we will count from 0
@@ -77,6 +75,35 @@ print(lst[0][2]) # [100] lst[0] is index 0 of the first dimention so [5,6,[100]]
 
 print(lst[0][2][0]) # 100 last [0] in print is index 0 of third dimention 
 
+lst =[]
+string = "yo"
+string2 = "yo"
+string3 = "yo"
+# lst.append(string,string2,string3) # we can NOT put multiple elements inside append()
+lst.append(string)
+lst.append(string2)
+lst.append(string3)
+print(lst)
 
 
 
+
+
+lst = []
+
+string1 = str(input("Enter a string: "))
+string2 = str(input("Enter a string: "))
+string3 = str(input("Enter a string: "))
+string4 = str(input("Enter a string: "))
+string5 = str(input("Enter a string: "))
+lst.append(string1)
+lst.append(string2)
+lst.append(string3)
+lst.append(string4)
+lst.append(string5)
+
+number1 = float(input("Enter a number: "))
+number2 = float(input("Enter a number: "))
+number3 = float(input("Enter a number: "))
+
+print(lst[number1])
