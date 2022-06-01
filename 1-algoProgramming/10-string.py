@@ -44,25 +44,30 @@
 
 # print(s2)
 
-name = input("name?: ")
-# print("hello",name,"! Thanks!")
+# name = input("name?: ")
+# # print("hello",name,"! Thanks!")
 
-# s = f"Hello,{name}!"
-# print(s)
+# # s = f"Hello,{name}!"
+# # print(s)
 
-print(name * 5)
-string = """hello my name is Sayo and this is a mulyilinr string
-!
-"""
+# print(name * 5)
+# string = """hello my name is Sayo and this is a mulyilinr string
+# !
+# """
 
-# we can call multiple comment by string
+# # we can call multiple comment by string
 
-string3 = f'{name}\'s'
+# string3 = f'{name}\'s'
 
-# when you use ' in string, you need to use "" double courtation around string or after {}, use \ 
+# # when you use ' in string, you need to use "" double courtation around string or after {}, use \ 
 
 
-lst = ["t","i","m"]
+# lst = ["t","i","m"]
 
-string = "!".join(lst)
+# string = "!".join(lst)
 # when you want to add string into list, use .join()
+
+var = "algoexpert".upper().replace("o", "i").capitalize().lower().split("e")
+
+print("foo".join(var))
+
