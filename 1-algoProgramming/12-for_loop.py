@@ -82,31 +82,34 @@ lst = [[1,2],[3,4],[5,6],[7,8]]
 
 for i in range(len(lst)):
     new_list = lst[i]
+    print(new_list)
     for j in range(len(new_list)):
         print(new_list[j])
 
 
-string = "hello world"
+# string = "hello world"
 
-for i,char in range(len(string)):
-    if char == "w":
-        print(i)
+# for i,char in range(len(string)):
+#     if char == "w":
+#         print(i)
 
-numbers = [] # it can not be inside of loop, because every loop over it will set and be empty , so it doesn't work
-for i in range(10):
-    num = input("Enter a number: ")
-    numbers.append(num)
-print(numbers)
+# numbers = [] # it can not be inside of loop, because every loop over it will set and be empty , so it doesn't work
+# for i in range(10):
+#     num = input("Enter a number: ")
+#     numbers.append(num)
+# print(numbers)
 
-# pass -> move on the next step. noting is gonna happend
+# # pass -> move on the next step. noting is gonna happend
 
-# for else!!!
-words = ("hello","name","this","is","word")
-target = "name"
-found = False
-for word in words:
-    if word == target:
-        print("I found the world")
-        found = True
-if not found:
-        print("I didn't find the world")
+# # for else!!!
+# words = ("hello","name","this","is","word")
+# target = "name"
+# found = False
+# for word in words:
+#     if word == target:
+#         print("I found the world")
+#         found = True
+# if not found:
+#         print("I didn't find the world")
+
+
