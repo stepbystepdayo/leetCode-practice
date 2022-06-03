@@ -78,13 +78,13 @@
 
 # nested list
 
-lst = [[1,2],[3,4],[5,6],[7,8]]
+# lst = [[1,2],[3,4],[5,6],[7,8]]
 
-for i in range(len(lst)):
-    new_list = lst[i]
-    print(new_list)
-    for j in range(len(new_list)):
-        print(new_list[j])
+# for i in range(len(lst)):
+#     new_list = lst[i]
+#     print(new_list)
+#     for j in range(len(new_list)):
+#         print(new_list[j])
 
 
 # string = "hello world"
@@ -112,4 +112,9 @@ for i in range(len(lst)):
 # if not found:
 #         print("I didn't find the world")
 
+
+num = int(input("Number "))
+
+for i in range(20,num,-1):
+    print(i)
 
