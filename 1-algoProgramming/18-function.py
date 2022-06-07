@@ -80,47 +80,59 @@ we can decide the number of start, end and stop in parameter!
 # result = remove_chars("hello world","l")
 # print(result)
 
-# SUM of both strings
+# # SUM of both strings
 
-def sum(lst1, lst2):
-    sum1 = sum_list(lst1)
-    sum2 = sum_list(lst2)
+# def sum(lst1, lst2):
+#     sum1 = sum_list(lst1)
+#     sum2 = sum_list(lst2)
 
-    return sum1 , sum2
+#     return sum1 , sum2
 
-def sum_list(lst):
-    total = 0
+# def sum_list(lst):
+#     total = 0
 
-    for num in lst:
-        total += num
+#     for num in lst:
+#         total += num
     
-    return total
+#     return total
 
 
-print(sum([1,2,3,4],[2,3,4,5]))
+# print(sum([1,2,3,4],[2,3,4,5]))
 
 
-# NESTED FUNCTION!!!
+# # NESTED FUNCTION!!!
 
-def sum(lst1, lst2):
-    # we can nest def but, you need to be careful the space!
-    def sum_list(lst):
-        total = 0   
-        for num in lst:
-            total += num
+# def sum(lst1, lst2):
+#     # we can nest def but, you need to be careful the space!
+#     def sum_list(lst):
+#         total = 0   
+#         for num in lst:
+#             total += num
 
-        return total
-    sum1 = sum_list(lst1)
-    sum2 = sum_list(lst2)
+#         return total
+#     sum1 = sum_list(lst1)
+#     sum2 = sum_list(lst2)
 
-    return sum1 , sum2
-
-
+#     return sum1 , sum2
 
 
-print(sum([1,2,3,4],[2,3,4,5]))
 
 
+# print(sum([1,2,3,4],[2,3,4,5]))
+
+
+def running_sums(numbers):
+    # Write your code here.
+    sumNum = 0
+    output = []
+    for idx in range(len(numbers)):
+        # print(idx)
+        sumNum += numbers[idx] 
+        output.append(sumNum)
+    return output 
+    # print(output)
+
+print(running_sums([5,4,2,1,5,6,4]))
 
 
 
