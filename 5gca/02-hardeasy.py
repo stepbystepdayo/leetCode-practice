@@ -23,20 +23,36 @@
 # , index {i} / {length}
 
 
-def solution(words):
-	# make some sort of default array
-	booleanlist = [0] * (len(words) -1 )
+# def solution(words):
+# 	# make some sort of default array
+# 	booleanlist = [0] * (len(words) -1 )
 	
-	for index in range(len(words) - 1):
-		print(index)
-		if words[index][0] == words[index + 1][0] and words[index][-1] == words[index +1][-1]:
-			booleanlist[index] = True
-		else:
-			booleanlist[index] = False
+# 	for index in range(len(words) - 1):
+# 		print(index)
+# 		if words[index][0] == words[index + 1][0] and words[index][-1] == words[index +1][-1]:
+# 			booleanlist[index] = True
+# 		else:
+# 			booleanlist[index] = False
 		
-	return booleanlist
+# 	return booleanlist
 
 
 
 
-print(solution(["abcd","adbdd","da","dd"])) # [True, False,False]
+# print(solution(["abcd","adbdd","da","dd"])) # [True, False,False]
+
+def solution(words):
+	output = []
+	for idx in range(len(words)):
+		if idx == len(words) -1:
+			together = str(words[-1][0]) + str(words[0][-1])
+		else:
+			together = str(words[idx][0]) + str(words[idx][-1])
+		print(together)
+		output.append(together)
+
+	return output
+
+
+print(solution(["cat","dog","ferret","scorpion"]))
+

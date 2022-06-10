@@ -38,17 +38,8 @@ def solution(numbers):
         start += 1
         end -= 1
     # we passed the jungle, we survived the while. 
-
     # VICTORY YOU WIN
-    return True
-        
-    
-
-
-
-
-
-
+    return True       
 print(solution(numbers = 1221))
 print(solution(numbers = 121))
 print(solution(numbers = -121))
