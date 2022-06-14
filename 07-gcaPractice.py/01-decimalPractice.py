@@ -13,9 +13,10 @@ For numbers[3] = 16, there is no an integer 1 ≤ x ≤ 3, such that 4 * x = 16,
 For numbers[4] = 5, we can choose x = 1 because 5 * 1 = 5 and 1 ≤ 1 ≤ 3, so result[4] = true.
 
 '''
+import math
+
 def solution(numbers, left, right):
     result = []
-    
     for idx in range(len(numbers)):
         x = numbers[idx] / (idx + 1)
         if x.is_integer() == False:
@@ -25,3 +26,4 @@ def solution(numbers, left, right):
         else:
             result.append(False)
     return result
+
