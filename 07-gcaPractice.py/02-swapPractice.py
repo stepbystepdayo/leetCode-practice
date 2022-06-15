@@ -21,3 +21,5 @@ By swapping the digits of numbers[1] = 31, the array becomes [13, 13, 30] which 
 By swapping the digits of numbers[2] = 30, the array becomes [13, 31, 3] which is not strictly increasing;
 So, it's not possible to obtain a strictly increasing array, and the answer is false.
 '''
+
+
