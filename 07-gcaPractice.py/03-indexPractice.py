@@ -23,16 +23,19 @@ def solution(n, a):
         return a
     for idx in range(len(a)-1):
         if idx == 0:
-            firstNum =0 + a[0] + a[1]
-            print(firstNum)
+            firstNum = 0 + a[0] + a[1]
+            # print(firstNum)
             result.append(firstNum)
         if idx == len(a) -2:
+            # when you hit len(a)-2 thats mean 2, a[-1]+a[-1]+0. then, already last number was gone by range(len(a)-1) when you did loop over.
             lastNum = a[-2] + a[-1] + 0 
-            print(lastNum)
+            # print(lastNum)
             result.append(lastNum)
-        else:
+        else: 
             num = a[idx] + a[idx +1] + a[idx + 2]
-            print(num)
+            # print(num)
             result.append(num)
     return result
-            
+
+
+print(solution(5,[4, 0, 1, -2, 3])) #[4, 5, -1, 2, 1]  

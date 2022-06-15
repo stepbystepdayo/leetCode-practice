@@ -28,10 +28,10 @@ def solution(s):
             fast += 1
         if s[slow] != s[fast]:
             deleted = s.replace(s[slow],s[slow])
-            print(deleted)
+            # print(deleted)
             slow = fast
             fast = len(deleted) -1
-            print(s[slow],s[fast])
+            # print(s[slow],s[fast])
             if slow == fast:
                 slow += 1
                 fast -= 1
