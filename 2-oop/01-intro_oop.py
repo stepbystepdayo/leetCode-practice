@@ -22,7 +22,7 @@ print(type(func)) # <class 'function'> functions are object too!! function is ty
 
 
 # Instance!!!!
-#インスタンスはクラスを実体化すること。たい焼き機（クラス）｜たい焼き（インスタンス）
+#インスタンスはクラスを実体化すること。たい焼き機（クラス）｜たい焼き
 # instance is the existance of a object of a specific class. 
 
 x = 1 #value is one and instance is int class

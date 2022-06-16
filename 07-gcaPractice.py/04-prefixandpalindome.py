@@ -45,3 +45,35 @@ print(solution("abbab")) #b
 print(solution("aaabba")) # "a"
 print(solution("abbaabbaabba")) # ""
 
+'''
+def solution(s):
+    slow = 0
+    fast = 1
+    while slow < len(s):
+        if s[slow] == s[fast]:
+            fast += 1
+        if s[slow] != s[fast]:
+            deleted = s.replace(s[slow],s[slow])
+            print(deleted)
+            slow = fast
+            fast = len(deleted) -1
+            print(s[slow],s[fast])
+            if slow == fast:
+                slow += 1
+                fast -= 1
+                print(deleted)
+            else:
+                return ""
+                
+
+
+
+print(s: "aaacodedoc") #""
+s: "codesignal" #"codesignal"
+s: "" #""
+s: "abbab" # b
+s: "aaabba" # "a"
+s:"abbaabbaabba" #""
+
+
+'''
