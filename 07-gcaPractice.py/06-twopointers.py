@@ -33,12 +33,10 @@ def solution(a):
     result = []
     while start < end:
         result.append(a[start])
-        start += 1
         result.append(a[end])
+        start += 1
         end -= 1
-    
-    print(result)
-    
+    # print(result)
     for i in range(len(result)-1):
         if result[i] >= result[i +1]:
             return False
@@ -46,7 +44,7 @@ def solution(a):
     
 
 print(solution([1, 4, 5, 6, 3]))  # false
-print(solution([1, 3, 5, 6, 4, 2])) # True
+print(solution([1, 3, 5, 6, 4, 2])) # True 
 
 
 
