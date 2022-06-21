@@ -28,19 +28,33 @@
 # print(p2.name,p2.age) # Kai 30
 
 
+# class Fruit:
+#     def __init__(self,name,calorie):
+#         self.name = name
+#         self.calorie = calorie
+
+# apple = Fruit("apple",90)
+# apple.color = "red" # we can add new info for specific 
+# grapes = Fruit("grapes",120)
+
+# print(apple.name,apple.calorie)
+# print(grapes.name,grapes.calorie)
+
+
+
+
 class Fruit:
-    def __init__(self,name,calorie):
-        self.name = name
-        self.calorie = calorie
+    def __init__(self,name, cal):
+        self.name  = name
+        self.cal = cal
 
-apple = Fruit("apple",90)
-apple.color = "red" # we can add new info for specific 
-grapes = Fruit("grapes",120)
+grape = Fruit("grape",20)
+apple = Fruit("apple",20)
+banana = Fruit("banana",20)
 
-print(apple.name,apple.calorie)
-print(grapes.name,grapes.calorie)
-
-
+print(grape.name,grape.cal)
+print(apple.name,apple.cal)
+print(banana.name,banana.cal)
 
 
 
