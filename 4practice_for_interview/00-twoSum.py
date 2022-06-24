@@ -64,15 +64,20 @@ def solution(nums, target):
 # 4. we need to make the valiable adding start and end
 
 
-    sortedNums = sorted(nums)
-    # print(sortedNums)
+    
+    # need to enumerate nums then, you can see (index, nums)
+    nums = enumerate(nums)
+    # need to sort each nums not index.
+    nums = sorted(nums, key = lambda nums:nums[1])
+    print(nums)
     start = 0
     end = len(nums) -1
     # print(start,end) 
 
 
     while start < end:
-        startandEnd = sortedNums[start] + sortedNums[end]
+        
+        startandEnd = nums[start][1] + nums[end][1]
         # print(startandEnd)
         #if target is less than startandEnd, end will move to left.
         if startandEnd > target:
@@ -82,7 +87,8 @@ def solution(nums, target):
             start += 1
         #if target is same number as target, return number of start and end!
         if startandEnd == target:
-            return [start,end] 
+            # return only index of nums
+            return [nums[start][0],nums[end][0]] 
     return -1
 
 
@@ -90,5 +96,5 @@ def solution(nums, target):
 
 
 print(solution([2,7,11,15],9)) #[0,1]
-print(solution([3,2,4],6))#[0,2]
+print(solution([3,2,4],6))#[1,2]
 print(solution([3,3],6)) #[0,1]
