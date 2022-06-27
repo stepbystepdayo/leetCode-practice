@@ -87,7 +87,7 @@ def solution(nums, target):
             start += 1
         #if target is same number as target, return number of start and end!
         if startandEnd == target:
-            # return only index of nums
+            # return only index of nums 
             return [nums[start][0],nums[end][0]] 
     return -1
 

@@ -77,21 +77,42 @@
 
 
 
-def capital(students):
-    return [student.upper() for student in students]
+# def capital(students):
+#     return [student.upper() for student in students]
 
-print(capital(['Mizoguchi','lovingfoss','TaNaKa','kiBa']))
-
-
-# When you use lambda!
-
-def usingLambda(names):
-    return list(map(lambda name:name.upper(),names))
-
-print(usingLambda(['Mizoguchi','lovingfoss','TaNaKa','kiBa']))
+# print(capital(['Mizoguchi','lovingfoss','TaNaKa','kiBa']))
 
 
+# # When you use lambda!
+
+# def usingLambda(names):
+#     return list(map(lambda name:name.upper(),names))
+
+# print(usingLambda(['Mizoguchi','lovingfoss','TaNaKa','kiBa']))
 
 
 
+
+def practice(numbers):
+    first = numbers[0]
+    second = numbers[1]
+    count = 0
+    for i in range(len(numbers)-1):
+        if numbers[i] == first:
+            # print(numbers[i])
+            print(f"this matches first, index is {i} and value is {numbers[i]}")
+        elif numbers[i] == second:
+            print(f"this matches second, index is {i} and value is {numbers[i]}")
+        else:
+            count += 1
+    return count
+
+names = ["kai", "sayo", "micah", "jed", "hirona", "marisa"]
+
+for i in range(len(names)):
+    print(names[1])
+print(names[1])
+# print(practice([4, 3, 2, 3, 2, 5, 4, 3])) # 3
+
+# print(practice([3, 3, 1, 1, 3])) #2
 
