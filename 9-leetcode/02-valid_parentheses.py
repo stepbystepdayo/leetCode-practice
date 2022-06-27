@@ -28,7 +28,9 @@ def solution(s):
 
     for p in s:
         if p in parens:
+            # stack means not empty inside of stack | compare stack[-1]=> end of the element in stack and parens[p]
             if stack and stack[-1] == parens[p]:
+                print(stack[-1],parens[p])
                 stack.pop()
             else:
                 return False
@@ -43,6 +45,6 @@ def solution(s):
 
 
 print(solution("()"))
-print(solution("()[]{}"))
-print(solution("(]"))
-print(solution("]"))
+# print(solution("()[]{}"))
+# print(solution("(]"))
+# print(solution("]"))
