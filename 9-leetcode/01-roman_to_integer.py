@@ -58,7 +58,7 @@ def solution(str):
     count = 0
 
     for i in range(len(str)):
-        if i + 1 < len(str) and values[str[i]] < values[str[i+1]]:
+        if i + 1 < len(str) and values[str[i]] < values[str[i +1]]:
             count -= values[str[i]]
         else:
             count += values[str[i]]
