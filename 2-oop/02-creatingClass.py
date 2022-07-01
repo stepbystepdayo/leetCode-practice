@@ -54,7 +54,7 @@ banana = Fruit("banana",20)
 
 print(grape.name,grape.cal)
 print(apple.name,apple.cal)
-print(banana.name,banana.cal)
+print(banana.name,grape.cal)
 
 
 
