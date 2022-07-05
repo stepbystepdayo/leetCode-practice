@@ -30,6 +30,7 @@ def solution(prices):
     while fast < len(prices):
         if prices[slow] < prices[fast]:
             profit = prices[fast] - prices[slow]
+            # max(something, something) we can compare 2 which one is bigger
             maxP = max(maxP, profit)
         else:
             slow = fast
