@@ -22,12 +22,26 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
 '''
 
 def solution(num):
+    result = []
+
+    for number in range(1, num + 1):
+        if number % 3 == 0 and number % 5 == 0:
+            result.append("FizzBuzz")
+        elif number % 3 == 0:
+            result.append("Fizz")
+        elif number % 5 == 0:
+            result.append("Buzz")
+        else:
+            numToString = str(number)
+            result.append(numToString)
+    return result
 
 
 
-print(solution(3))
-print(solution(5))
-print(solution(15))
+
+print(solution(3)) #['1', '2', 'Fizz']
+print(solution(5)) # ['1', '2', 'Fizz', '4', 'Buzz']
+print(solution(15)) # ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz']
 
 
 
