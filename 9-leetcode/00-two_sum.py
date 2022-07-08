@@ -34,6 +34,13 @@ Only one valid answer exists.
 
 
 def solution(nums,target):
+    hashmap = {}
+    for num in nums:
+        comp = target - num
+        if num not in hashmap:
+            hashmap[num] = comp
+        if 
+
 
 
 
