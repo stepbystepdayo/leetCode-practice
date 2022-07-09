@@ -22,20 +22,25 @@ Output: true
 
 def solution(arr):
     hashmap = {}
-    setNum = set(arr)
-    count = 0
-    print(len(setNum))
-        
+    checkV = set()
+
+    # need to make hashmap
     for num in arr:
         if num not in hashmap:
             hashmap[num] = 1
-            count += 1
         else:
             hashmap[num] += 1
-            print(hashmap,count)  
-        
+
+    # need to loop over values of hashmap
     for v in hashmap.values():
-        print("this is value",v)
-        if v == count:
-            return True
-    return False
+        if v in checkV:
+            return False
+        else:
+            checkV.add(v)
+    return True
+
+
+print(solution([1,2,2,1,1,3])) # True
+print(solution([-1,-1,-1,-3,-1,-1])) # True
+print(solution([1,2])) # False
+print(solution([-3,0,1,-3,1,1,1,-3,10,0])) #True
