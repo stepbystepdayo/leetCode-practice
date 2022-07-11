@@ -22,8 +22,11 @@ def solution(nums,target):
     end = len(nums)-1
 
     while start <= end:
+        # need to make pivit 
         piv = (start + end) // 2
 
+        # if nums[piv] is less than target, we need to move start to right(+= 1). otherwise, need to move end to left(-=1).
+        # if two pointer checked everything and they couldn't find the target, return -1
         if nums[piv] == target:
             return piv
         if nums[piv] < target:
@@ -31,7 +34,7 @@ def solution(nums,target):
         if nums[piv] > target:
             end -= 1
     return -1
-    
+
 
 
 
