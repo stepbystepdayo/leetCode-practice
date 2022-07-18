@@ -33,17 +33,23 @@ Only one valid answer exists.
 """
 
 
-import enum
-
 
 def solution(nums,target):
+    # need to make hashmap to store the number that complement number and index.
     hashmap = {}
     for index, num in enumerate(nums):
+        # need to set up complement number(target - num)
         comp = target - num
+        # if complement number in hashmap, return hashmap[comp] and index. otherwise, we need to make hashmap.
         if comp in hashmap:
             return [hashmap[comp],index]
         hashmap[num] = index
     return -1
+
+    
+
+
+
 
 
 
