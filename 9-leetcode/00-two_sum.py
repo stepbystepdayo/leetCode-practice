@@ -38,14 +38,11 @@ import enum
 
 def solution(nums,target):
     hashmap = {}
-    for num in range(len(nums)):
-        comp = target - nums[num]
-        print(comp)
-        if nums[num] in hashmap:
-            return [hashmap[nums[num]][1], num]
-        else:
-            hashmap[comp] = num
-    print(hashmap)
+    for index, num in enumerate(nums):
+        comp = target - num
+        if comp in hashmap:
+            return [hashmap[comp],index]
+        hashmap[num] = index
     return -1
 
 
