@@ -33,17 +33,24 @@ Only one valid answer exists.
 """
 
 
+import enum
+
+
 def solution(nums,target):
     hashmap = {}
-    for num in nums:
-        comp = target - num
-        if num not in hashmap:
-            hashmap[num] = comp
-        if 
+    for num in range(len(nums)):
+        comp = target - nums[num]
+        print(comp)
+        if nums[num] in hashmap:
+            return [hashmap[nums[num]][1], num]
+        else:
+            hashmap[comp] = num
+    print(hashmap)
+    return -1
 
 
 
 
-print(solution([2,7,11,15], 6)) #[0,1]
+print(solution([2,7,11,15], 9)) #[0,1]
 print(solution([3,2,4], 6))# [1,2]
 print(solution([3,3], 6)) #[0,1]
