@@ -16,9 +16,6 @@ def solution(arr):
     return result
 
 
-        
-
-
 
 
 print(solution([1,5,7,3,2,1])) #[1,5,3,7,1,2]
