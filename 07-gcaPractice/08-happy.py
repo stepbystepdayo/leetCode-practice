@@ -37,10 +37,21 @@ def solution(a):
         if num not in hashmap:
             hashmap[num] = 0
         hashmap[num] += 1
-    print(set(hashmap))
-    maxV =max(hashmap.values())
-    result = [k for k,v in hashmap.items()if v == maxV]
-    return sorted(result)
+    print(hashmap)
+    # maxV =max(hashmap.values())
+    
+    # result = [k for k,v in hashmap.items()if v == maxV]
+    # result.sort()
+    result = []
+    maxV = max(hashmap.values())
+    for k, v in hashmap.items():
+        if v == maxV:
+            result.append(k)
+    result.sort()
+
+            
+
+    return result
 
 
 print(solution([25, 2, 3, 57, 38, 41])) #[2,3,5]
