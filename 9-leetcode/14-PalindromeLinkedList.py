@@ -38,3 +38,13 @@ class Solution:
             s += 1
             e -= 1
         return True
+
+'''
+Other ways, after made list, compare list and reversed list then, if they are same Return True, Otherwise Return False
+'''
+        # reversedlst = arr[::-1]
+
+        # if arr == reversedlst:
+        #     return True
+        # else:
+        #     return False
