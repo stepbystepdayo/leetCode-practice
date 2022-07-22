@@ -5,6 +5,7 @@ def solution(n,a):
         return a
 
     for i in range(len(a)-1):
+        
         if i == 0:
             first = a[i] + a[i + 1]
             result.append(first)
