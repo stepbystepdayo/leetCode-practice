@@ -93,26 +93,37 @@
 
 
 
-def practice(numbers):
-    first = numbers[0]
-    second = numbers[1]
-    count = 0
-    for i in range(len(numbers)-1):
-        if numbers[i] == first:
-            # print(numbers[i])
-            print(f"this matches first, index is {i} and value is {numbers[i]}")
-        elif numbers[i] == second:
-            print(f"this matches second, index is {i} and value is {numbers[i]}")
-        else:
-            count += 1
-    return count
+# def practice(numbers):
+#     first = numbers[0]
+#     second = numbers[1]
+#     count = 0
+#     for i in range(len(numbers)-1):
+#         if numbers[i] == first:
+#             # print(numbers[i])
+#             print(f"this matches first, index is {i} and value is {numbers[i]}")
+#         elif numbers[i] == second:
+#             print(f"this matches second, index is {i} and value is {numbers[i]}")
+#         else:
+#             count += 1
+#     return count
 
-names = ["kai", "sayo", "micah", "jed", "hirona", "marisa"]
+# names = ["kai", "sayo", "micah", "jed", "hirona", "marisa"]
 
-for i in range(len(names)):
-    print(names[1])
-print(names[1])
+# for i in range(len(names)):
+#     print(names[1])
+# print(names[1])
 # print(practice([4, 3, 2, 3, 2, 5, 4, 3])) # 3
 
 # print(practice([3, 3, 1, 1, 3])) #2
 
+
+# lst = [[5,6,[100]],[1,2],[1,2,3]]
+
+def solution(lst):
+    for i in range(len(lst)):
+        print(lst[i][0] *lst[i][1])
+        # kake = lst[0] * lst[1]
+        # print(kake)
+
+
+print(solution([[5,6],[1,2],[1,2,3]]))
