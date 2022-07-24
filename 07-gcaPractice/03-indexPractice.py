@@ -46,6 +46,7 @@ def solution(n, a):
         if i - 1 < 0:
             result.append(0 + a[i] + a[i+1])
         if i + 1 > len(a)-1:
+            # when i+1 hit last elements of a, append(a[i] + a[i-1])
             result.append(a[i] + a[i-1])
         else:
             result.append(a[i-1] + a[i] + a[i +1])
