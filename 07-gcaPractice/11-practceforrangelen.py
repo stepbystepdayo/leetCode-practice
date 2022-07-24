@@ -6,7 +6,7 @@ def solution(lst):
         # print(lst[-1],len(lst)-1)
         if i == 0:
             output.append(lst[0])
-        if i == lst[-2]:
+        if i == len(lst)-2:
             output.append(lst[-1])
         else:
             others = lst[i] +lst[i+1]
