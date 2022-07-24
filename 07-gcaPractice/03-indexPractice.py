@@ -17,6 +17,9 @@ So, the resulting array after the mutation will be [4, 5, -1, 2, 1].
 
 '''
 
+import enum
+
+
 def solution(n, a):
     # result = []
     # if n == 1:
@@ -37,5 +40,16 @@ def solution(n, a):
     #         result.append(num)
     # return result
 
+    result = []
+
+    for i, number in enumerate(a):
+        if i - 1 < 0:
+            result.append(0 + a[i] + a[i+1])
+        if i + 1 > len(a)-1:
+            result.append(a[i] + a[i-1])
+        else:
+            result.append(a[i-1] + a[i] + a[i +1])
+
+    return result
 
 print(solution(5,[4, 0, 1, -2, 3])) #[4, 5, -1, 2, 1]  

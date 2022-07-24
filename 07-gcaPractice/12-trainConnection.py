@@ -1,7 +1,5 @@
 
 
-
-
 def solution(a,b,c,start,end):
     together = [a,b,c]
 
